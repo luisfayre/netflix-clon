@@ -1,6 +1,6 @@
 ## Plugins que utilizo
 - **[PHP Namespace Resolver](https://marketplace.visualstudio.com/items?itemName=MehediDracula.php-namespace-resolver)**
-- **[PHP IntelliSense](https://marketplace.visualstudio.com/items?itemName=zobo.php-intellisense/)**
+- **[PHP IntelliSense](https://marketplace.visualstudio.com/items?itemName=zobo.php-intellisense)**
 - **[PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)**
 - **[Laravel Snippets](https://marketplace.visualstudio.com/items?itemName=onecentlin.laravel5-snippets)**
 - **[laravel intellisense](https://marketplace.visualstudio.com/items?itemName=mohamedbenhida.laravel-intellisense)**
