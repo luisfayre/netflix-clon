@@ -14,7 +14,7 @@ class PeliculaController extends Controller
      */
     public function index()
     {
-        return view('peliculas.index',['peliculas' => Pelicula::all()]);
+        return view('peliculas.index', ['peliculas' => Pelicula::all()]);
     }
 
     /**
@@ -24,7 +24,7 @@ class PeliculaController extends Controller
      */
     public function create()
     {
-        //
+        return view('peliculas.create');
     }
 
     /**
@@ -35,7 +35,12 @@ class PeliculaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $pelicula = Pelicula::create(
+            $request->all()
+        );
+
+        return back();
     }
 
     /**
