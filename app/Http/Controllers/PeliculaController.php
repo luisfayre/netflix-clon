@@ -62,7 +62,7 @@ class PeliculaController extends Controller
      */
     public function edit(Pelicula $pelicula)
     {
-        //
+        return view('peliculas.edit',compact('pelicula'));
     }
 
     /**
@@ -74,7 +74,12 @@ class PeliculaController extends Controller
      */
     public function update(Request $request, Pelicula $pelicula)
     {
-        //
+
+        $pelicula = $pelicula->update(
+            $request->all()
+        );
+
+        return redirect()->route('pelicula.index');
     }
 
     /**
