@@ -90,6 +90,7 @@ class PeliculaController extends Controller
      */
     public function destroy(Pelicula $pelicula)
     {
-        //
+        $pelicula->delete();
+        return back();
     }
 }

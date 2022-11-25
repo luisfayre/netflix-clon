@@ -22,6 +22,17 @@
           <td>{{ $pelicula->imagen }} </td>
           <td>
             <a class="btn btn-primary" href="{{ route('pelicula.edit',$pelicula->id)}}" role="button">Editar</a>
+                <a class="btn btn-danger" href="#" 
+                  onclick="event.preventDefault(); document.getElementById('delete-form{{$pelicula->id}}').submit();">
+                  Eliminar
+            </a>
+     
+            <form action="{{ route('pelicula.destroy',$pelicula->id)}}" method="POST" id="delete-form{{$pelicula->id}}" style="display: none;">
+                @csrf
+                @method('DELETE')
+            </form>
+
+
           </td>
         </tr>
         @endforeach
