@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PeliculaController;
+use App\Http\Controllers\PerfilController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,5 +24,14 @@ Route::resource('pelicula', PeliculaController::class);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::resource('usuarios', PerfilController::class)->middleware('auth');
+
+
+// Route::get('/usuarios', function () {
+//     return view('user');
+// });
+
 
 

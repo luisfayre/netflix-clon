@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/img/netflix-icon.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="./css/login.css">
+    <link rel="shortcut icon" href="{{ asset('./assets/img/netflix-icon.jpg') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ asset('./css/login.css') }}">
 
     <title>Netflix-clone</title>
 </head>
@@ -14,7 +14,7 @@
 <body>
     <div class="container">
         <header>
-            <img src="./assets/img/logo.png" alt="Logo">
+            <img src="{{ asset('./assets/img/logo.png') }}" alt="Logo">
         </header>
 
         @yield('contenido')

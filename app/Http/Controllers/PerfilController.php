@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Perfil;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PerfilController extends Controller
 {
@@ -14,7 +15,12 @@ class PerfilController extends Controller
      */
     public function index()
     {
-        //
+
+        $usuario = Auth::user();
+
+        $perfiles = $usuario->perfiles;
+
+        return view('perfiles.index', compact('perfiles'));
     }
 
     /**
@@ -24,7 +30,7 @@ class PerfilController extends Controller
      */
     public function create()
     {
-        //
+        return view('perfiles.create');
     }
 
     /**
@@ -35,7 +41,19 @@ class PerfilController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $perfil = new Perfil();
+        $perfil->nombre	= $request->nombre;
+        $perfil->user_id = Auth::id();
+
+        if ($request->has('tipo')) {
+            $perfil->tipo = true;
+        }else{
+            $perfil->tipo = false;
+        }
+
+        $perfil->save();
+
+        return redirect()->route('usuarios.index');
     }
 
     /**
