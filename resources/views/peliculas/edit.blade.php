@@ -1,6 +1,8 @@
 
 @extends('layouts.app')
 
+@section('titulo', 'Editar peliculas: ' . $pelicula->nombre)
+
 @section('contenido')
 <form action="{{ route('pelicula.update',$pelicula)}}" method="post">
   @csrf

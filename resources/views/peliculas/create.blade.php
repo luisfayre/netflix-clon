@@ -1,6 +1,8 @@
 
 @extends('layouts.app')
 
+@section('titulo', 'Crear peliculas')
+
 @section('contenido')
 <form action="{{ route('pelicula.store')}}" method="post">
   @csrf
